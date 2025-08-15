@@ -1,0 +1,22 @@
+{
+	"nodejs-testing.extensions": [
+		{
+			"extensions": ["mjs", "cjs", "js"],
+			"parameters": []
+		},
+		{
+			"extensions": ["mts", "cts", "ts"],
+			"parameters": [
+				"--experimental-strip-types",
+				"--disable-warning=ExperimentalWarning"
+			]
+		}
+	],
+	"nodejs-testing.pretest": [
+		"npm",
+		"run",
+		"--workspaces",
+		"--if-present",
+		"pretest"
+	]
+}
