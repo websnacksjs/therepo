@@ -1,0 +1,8 @@
+{
+	"recommendations": [
+		"mkhl.direnv",
+		"biomejs.biome",
+		"editorconfig.editorconfig",
+		"connor4312.nodejs-testing"
+	]
+}

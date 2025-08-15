@@ -1,0 +1,28 @@
+{
+	"name": "@websnacksjs/i18n",
+	"version": "0.1.0",
+	"description": "A lightweight, zero-dependency, isomorphic internationalization (i18n) library for modern build pipelines.",
+	"keywords": [
+		"websnacks",
+		"i18n",
+		"translation",
+		"internationalization",
+		"i18n"
+	],
+	"author": "M. George Hansen <mgeorge@technopolitica.com>",
+	"license": "Apache-2.0",
+	"type": "module",
+	"exports": {
+		".": "./dist/index.js"
+	},
+	"files": [
+		"dist/",
+		"src/"
+	],
+	"scripts": {
+		"build": "tsc --build",
+		"test": "tsc --noEmit --project tests/tsconfig.json && node --experimental-strip-types --disable-warning=ExperimentalWarning --test",
+		"pretest": "npm run build",
+		"prepack": "npm run build"
+	}
+}

@@ -1,0 +1,64 @@
+# ==================================================
+# Base rules
+# ==================================================
+# Ignore everything except what is explicitly
+# whitelisted, but recurse into subdirectories and
+# allow .gitignore files in those subdirectories
+# to provide their own rules.
+*
+!*/
+!.gitignore
+
+### Prevent recursing into generated folders ###
+**/node_modules/
+**/.direnv/
+**/dist/
+
+# ==================================================
+# Workspace Configuration
+# ==================================================
+# Root-level workspace configuration.
+
+### Licenses and documentation ###
+!/README.md
+!/LICENSE
+
+### Editor & code style ###
+!/biome.json
+!/.editorconfig
+!/.vscode/extensions.json
+!/.vscode/settings.template.json
+!/.vscode/tasks.json
+
+### Development environment ###
+!/.envrc
+!/flake.nix
+!/flake.lock
+
+### Workspace configuration ###
+!/package.json
+!/package-lock.json
+!/tsconfig*.json
+
+# ==================================================
+# Packages
+# ==================================================
+# Establish a standard package structure which
+# individual packages can override or augment with
+# their own .gitignore.
+
+### Package configuration ###
+!/packages/*/README.md
+!/packages/*/LICENSE
+!/packages/*/package.json
+!/packages/*/tsconfig*.json
+!/packages/*/*.config.ts
+
+### Sources ###
+!/packages/*/src/**/*.ts
+!/packages/*/src/**/*.tsx
+
+### Tests ###
+!/packages/*/tests/tsconfig.json
+!/packages/*/tests/**/*.ts
+!/packages/*/tests/**/*.tsx
