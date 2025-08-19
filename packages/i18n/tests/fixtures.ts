@@ -2,8 +2,8 @@ import I18n, { type I18nOptions } from "@websnacksjs/i18n";
 
 export type Fixtures = {
 	base: {
-		common: typeof import("./fixtures/base/messages/en/common.json");
-		drama: typeof import("./fixtures/base/messages/en/drama.json");
+		common: typeof import("./fixtures/base/en/common.json");
+		drama: typeof import("./fixtures/base/en/drama.json");
 	};
 };
 
@@ -17,7 +17,7 @@ export const withFixture = <F extends keyof Fixtures>(
 				supportedLocales: ["en", "fr", "fr-Arab"],
 				namespaces: ["drama"],
 				messagesUrlTemplate: new URL(
-					"./fixtures/base/messages/:locale/:namespace.json",
+					"./fixtures/base/:locale/:namespace.json",
 					import.meta.url,
 				),
 				...(overrides as Partial<I18nOptions<Fixtures["base"]>>),
