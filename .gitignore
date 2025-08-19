@@ -36,6 +36,7 @@
 !/flake.lock
 
 ### Repository configuration ###
+!/.github/workflows/*.yml
 !/.husky/commit-msg
 !/conventional.config.js
 

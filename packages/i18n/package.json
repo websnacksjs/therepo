@@ -21,7 +21,7 @@
 	],
 	"scripts": {
 		"build": "tsc --build",
-		"test": "tsc --noEmit --project tests/tsconfig.json && node --experimental-strip-types --disable-warning=ExperimentalWarning --test",
+		"test": "tsc --noEmit --project tests/tsconfig.json && node --experimental-strip-types --disable-warning=ExperimentalWarning --test --test-reporter=dot",
 		"pretest": "npm run build",
 		"prepack": "npm run build"
 	}
