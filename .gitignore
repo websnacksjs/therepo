@@ -35,6 +35,10 @@
 !/flake.nix
 !/flake.lock
 
+### Repository configuration ###
+!/.husky/commit-msg
+!/conventional.config.js
+
 ### Workspace configuration ###
 !/package.json
 !/package-lock.json

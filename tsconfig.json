@@ -1,5 +1,14 @@
 {
-	"files": [],
+	"extends": ["./tsconfig.common.json"],
+	"compilerOptions": {
+		"rootDir": ".",
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
+		"allowJs": true,
+		"noEmit": true,
+		"checkJs": true
+	},
+	"include": ["./*.config.js"],
 	"references": [
 		{
 			"path": "./packages/conventional"
