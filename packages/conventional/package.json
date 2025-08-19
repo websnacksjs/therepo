@@ -1,0 +1,30 @@
+{
+	"name": "@websnacksjs/conventional",
+	"version": "0.1.0",
+	"description": "A conventional commit cli application",
+	"keywords": [
+		"websnacks",
+		"conventional-commit",
+		"git"
+	],
+	"author": "M. George Hansen <mgeorge@technopolitica.com>",
+	"license": "Apache-2.0",
+	"type": "module",
+	"bin": "bin/conventional.js",
+	"exports": {
+		".": "./dist/lib/index.js"
+	},
+	"files": [
+		"dist/",
+		"src/"
+	],
+	"scripts": {
+		"build": "tsc --build",
+		"test": "tsc --noEmit --project tests/tsconfig.json && node --experimental-strip-types --disable-warning=ExperimentalWarning --test",
+		"pretest": "npm run build",
+		"prepack": "npm run build"
+	},
+	"devDependencies": {
+		"ts-poet": "^6.12.0"
+	}
+}
