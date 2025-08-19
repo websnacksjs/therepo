@@ -18,5 +18,8 @@
 		"--workspaces",
 		"--if-present",
 		"pretest"
-	]
+	],
+	"nodejs-testing.debugOptions": {
+		"autoAttachChildProcesses": true
+	}
 }
