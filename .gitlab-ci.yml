@@ -1,0 +1,18 @@
+stages: [build, test]
+
+build:
+  stage: build
+  cache: &cached-deps
+    key:
+      files: [package-lock.json]
+    paths: [node_modules/]
+  script:
+    - npm ci
+    - npm run build --workspaces --if-present
+
+test:
+  stage: test
+  cache:
+    <<: &cached-deps
+  script:
+    - npm run test --workspaces --if-present

@@ -36,6 +36,7 @@
 !/flake.lock
 
 ### Repository configuration ###
+!/.gitlab-ci.yml
 !/.husky/commit-msg
 !/conventional.config.js
 
