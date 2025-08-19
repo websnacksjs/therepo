@@ -55,6 +55,7 @@
 !/packages/*/*.config.ts
 
 ### Sources ###
+!/packages/*/bin/*.js
 !/packages/*/src/**/*.ts
 !/packages/*/src/**/*.tsx
 
